@@ -4,10 +4,12 @@
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +26,48 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  min-height: 500px;
+  width: 35%;
+  max-width: 336px;
+  left: 65%;
+  top: 128px;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.greyBg {
+  background-color: hsl(195deg, 20%, 86%);
+  position: fixed;
+  bottom: 0;
+  height: 40%;
+  left: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .controlColumn {
+    width: 100%;
+    margin-left: -32px;
+    padding-left: 32px;
+    overflow: scroll;
+    white-space: nowrap;
+    display: flex;
+    position: absolute;
+    bottom: 24px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .characterWrapper {
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
 }
